@@ -1,0 +1,184 @@
+﻿<Page x:Class="Kırtasiye.Pages.SatisIslemi"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kırtasiye.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SatisIslemi">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Background="Aquamarine">
+            <!--sol grid-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="0.75*"/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="S A T I Ş   İ Ş L E M İ" FontWeight="Black" FontSize="18" FontStyle="Italic" Margin="0,5,0,0" TextAlignment="Center"/>
+                <Button Content="Geri" x:Name="BtnGeri" Margin="2" Width="30" HorizontalAlignment="Left" Height="30"/>
+                <Separator Grid.Row="1" Margin="10,0" ></Separator>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox Grid.Column="0" x:Name="txFiltrele" Margin="0,5,5,5"/>
+                <ComboBox Grid.Column="1" x:Name="cbFiltreler" Margin="5,5,0,5">
+                    <ComboBoxItem Content="Ürün Adına Göre Sırala A ~ Z"/>
+                    <ComboBoxItem Content="Ürün Adına Göre Sırala Z ~ A"/>
+                    <ComboBoxItem Content="Ürün Adedine Göre Sırala 0 ~ 9"/>
+                    <ComboBoxItem Content="Ürün Adedine Göre Sırala 9 ~ 0"/>
+                    <ComboBoxItem Content="Ürün Satış Fiyatına Göre Sırala 0 ~ 9"/>
+                    <ComboBoxItem Content="Ürün Satış Fiyatına Göre Sırala 9 ~ 0"/>
+                </ComboBox>
+
+            </Grid>
+
+
+            <Grid Grid.Row="2" Background="Wheat">
+
+                <ListBox Grid.Row="1" Background="Wheat" x:Name="LbSatislar">
+                    <ListBox.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Sil" x:Name="MiSil"/>
+                        </ContextMenu>
+                    </ListBox.ContextMenu>
+                </ListBox>
+            </Grid>
+
+            <Grid Grid.Row="3" Background="Maroon">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnTemizle" Content="Temizle ❎" Margin="7.5,7.5,3.75,7.5"/>
+                <Button x:Name="btnSatis" Grid.Column="1" Content="Satış ✅" Margin="3.75,7.5,7.5,7.5"/>
+            </Grid>
+        </Grid>
+
+        <Grid Background="Azure" Grid.Column="1" >
+            <!-- sağ grid-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Background="Coral" Margin="5">
+                <!-- sağ üst grid -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <!--#region ürünler sıra #1 -->
+                <Button x:Name="BtnKursunKalem" Content="Kurşun Kalem ➤ 5₺" Margin="5"/>
+                <Button x:Name="BtnSilgi" Content="Silgi ➤ 5₺" Margin="5" Grid.Column="1"/>
+                <Button x:Name="BtnDefter" Content="Defter ➤ 20₺" Margin="5" Grid.Column="2"/>
+                <Button x:Name="BtnKitap" Content="Kitap ➤ 30₺" Margin="5" Grid.Column="3"/>
+                <!--#endregion-->
+
+                <!--#region ürünler sıra #2 -->
+                <Button x:Name="BtnCanta" Content="Çanta ➤ 350₺" Margin="5" Grid.Row="1"/>
+                <Button x:Name="BtnCetvel" Content="Cetvel ➤ 10₺" Margin="5" Grid.Row="1" Grid.Column="1"/>
+                <Button x:Name="BtnMakas" Content="Makas ➤ 10₺" Margin="5" Grid.Row="1" Grid.Column="2"/>
+                <Button x:Name="BtnPrintYapistirici" Content="Print Yapıştırıcı ➤ 20₺" Margin="5" Grid.Row="1" Grid.Column="3"/>
+                <!--#endregion-->
+
+                <!--#region ürünler sıra #3 -->
+                <Button x:Name="BtnFbPastelBoya" Content="Faber Castell Pastel Boya 12 Renk ➤ 50₺" Margin="5" Grid.Row="2"/>
+                <Button x:Name="BtnFbKuruBoya" Content="Faber Castell Kuru Boya 12 Renk ➤ 40₺" Margin="5" Grid.Row="2" Grid.Column="1"/>
+                <Button x:Name="BtnFbSuluBoya" Content="Faber Castell Sulu Boya 12 Renk ➤ 40₺" Margin="5" Grid.Row="2" Grid.Column="2"/>
+                <Button x:Name="BtnKeceliBoya" Content="Keçeli Boya 24 Renk ➤ 50₺" Margin="5" Grid.Row="2" Grid.Column="3"/>
+                <!--#endregion-->
+
+                <!--#region ürünler sıra #4 -->
+                <Button x:Name="BtnSuluk" Content="Suluk 700mL ➤ 100₺" Margin="5" Grid.Row="3"/>
+                <Button x:Name="Btn07Uc" Content="24'lü 0.7 Uç 3 Adet ➤ 25₺" Margin="5" Grid.Row="3" Grid.Column="1"/>
+                <Button x:Name="BtnBeslenmeCantasi" Content="Beslenme Çantası ➤ 200₺" Margin="5" Grid.Row="3" Grid.Column="2"/>
+                <Button x:Name="BtnFosforluKalem" Content="8'li Fosforlu Kalem ➤ 100₺" Margin="5" Grid.Row="3" Grid.Column="3"/>
+                <!--#endregion-->
+
+                <!--#region ürünler sıra #5 -->
+                <Button x:Name="BtnKalemKutusu" Content="Kalem Kutusu ➤ 70₺" Margin="5" Grid.Row="4"/>
+                <Button x:Name="BtnBuroBandi" Content="12'li Büro Bandı ➤ 45₺" Margin="5" Grid.Row="4" Grid.Column="1"/>
+                <Button x:Name="BtnKalemtiras" Content="Kalemtıraş ➤ 20₺" Margin="5" Grid.Row="4" Grid.Column="2"/>
+                <Button x:Name="BtnA4" Content="80gr A4 ➤ 100₺" Margin="5" Grid.Row="4" Grid.Column="3"/>
+                <!--#endregion-->
+
+                <!--#region ürünler sıra #6 -->
+                <Button x:Name="BtnFbKirmiziKalem" Content="Faber Castell 12'li Kırmızı Kalem ➤ 50₺" Margin="5" Grid.Row="5"/>
+                <Button x:Name="BtnTahtaKalemi" Content="4'lü Tahta Kalemi ➤ 30₺" Margin="5" Grid.Row="5" Grid.Column="1"/>
+                <Button x:Name="BtnFonKartonu" Content="10'lu 50x70cm Fon Kartonu ➤ 25₺" Margin="5" Grid.Row="5" Grid.Column="2"/>
+                <Button x:Name="BtnFbParmakBoya" Content="Faber Castell 10'lu Parmak Boyası ➤ 50₺" Margin="5" Grid.Row="5" Grid.Column="3"/>
+                <!--#endregion-->
+
+            </Grid>
+
+            <Grid Background="Chocolate" Grid.Row="1" Margin="5">
+                <!--sağ alt grid-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1.5*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Ö z e l  M i k t a r  E k l e" FontWeight="Bold" FontSize="16" TextAlignment="Center" Margin="0,15,0,0"/>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1.2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="Ürün Adı :" TextAlignment="Left" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="12" Margin="5,0,0,0"/>
+                        <TextBox Grid.Column="1" x:Name="txUrunAd" Height="30"/>
+                    </Grid>
+
+                    <Grid Grid.Column="1" Margin="5,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1.5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="Ürün Fiyatı :" TextAlignment="Left" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="12"/>
+                        <TextBox Grid.Column="1" x:Name="txUrunFiyat"  Height="30"/>
+                        <Button Grid.Column="2" x:Name="btnUrunKaydet" Content="Kaydet" Height="30" Margin="5,0"/>
+                    </Grid>
+
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

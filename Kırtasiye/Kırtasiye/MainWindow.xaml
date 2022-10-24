@@ -1,0 +1,114 @@
+﻿<Window x:Class="Kırtasiye.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kırtasiye"
+        mc:Ignorable="d"
+        Title="Kırtasiye" Height="450" Width="800">
+    <Grid Margin="50">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--#region kategori 1 -->
+        <Grid Grid.Row="0" Grid.Column="0" Background="YellowGreen" Cursor="Hand" x:Name="grdSatis" Margin="0,0,2,2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Image Source="C:\Users\PC\Desktop\Kırtasiye\Kırtasiye\Images\satis.png" Width="75" Margin="5,0,0,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="Satış İşlemi" Style="{StaticResource tbAnaSayfaText}"/>
+            </StackPanel>
+        </Grid>
+        <!--#endregion-->
+        <!--#region kategori 2 -->
+        <Grid Grid.Row="0" Grid.Column="1" Background="DeepSkyBlue" Cursor="Hand" x:Name="grdRapor" Margin="2,0,2,2"> 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Image Source="C:\Users\PC\Desktop\Kırtasiye\Kırtasiye\Images\report.png" Width="55" Margin="5,0,0,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="Raporlar" Style="{StaticResource tbAnaSayfaText}"/>
+            </StackPanel>
+        </Grid>
+        <!--#endregion-->
+        <!--#region kategori 3 -->
+        <Grid Grid.Row="0" Grid.Column="2" Background="IndianRed" Cursor="Hand" x:Name="grdStokTakibi" Margin="2,0,0,2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Image Source="C:\Users\PC\Desktop\Kırtasiye\Kırtasiye\Images\handling product.jpg" Width="75" Margin="5,0,0,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="Stok Takibi" Style="{StaticResource tbAnaSayfaText}"/>
+            </StackPanel>
+        </Grid>
+        <!--#endregion-->
+        <!--#region kategori 4 -->
+        <Grid Grid.Row="1" Grid.Column="0" Background="#9917E6" Cursor="Hand" x:Name="grdUrunGiris" Margin="0,2,2,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Image Source="C:\Users\PC\Desktop\Kırtasiye\Kırtasiye\Images\productbuy.png" Width="60" Margin="5,0,0,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="Ürün Giriş" Style="{StaticResource tbAnaSayfaText}"/>
+            </StackPanel>
+        </Grid>
+        <!--#endregion-->
+        <!--#region kategori 5 -->
+        <Grid Grid.Row="1" Grid.Column="1" Background="#FAF32B" Cursor="Hand" x:Name="grdAyarlar" Margin="2,2,2,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Image Source="C:\Users\PC\Desktop\Kırtasiye\Kırtasiye\Images\setting.png" Width="70"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="Ayarlar" Style="{StaticResource tbAnaSayfaText}"/>
+            </StackPanel>
+        </Grid>
+        <!--#endregion-->
+        <!--#region kategori 6 -->
+        <Grid  Grid.Row="1" Grid.Column="2" Background="#E30900" Cursor="Hand" x:Name="grdCikis" Margin="2,2,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal" >
+                <Image Source="C:\Users\PC\Desktop\Kırtasiye\Kırtasiye\Images\exit.png" Width="60" Margin="5,0,0,0"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="Çıkış" Style="{StaticResource tbAnaSayfaText}"/>
+            </StackPanel>
+        </Grid>
+        <!--#endregion-->
+
+    </Grid>
+</Window>

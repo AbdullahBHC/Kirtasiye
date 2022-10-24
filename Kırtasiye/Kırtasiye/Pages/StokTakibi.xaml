@@ -1,0 +1,50 @@
+﻿<Page x:Class="Kırtasiye.Pages.StokTakibi"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kırtasiye.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StokTakibi">
+
+    <Grid Background="White">
+
+        <Grid Background="PeachPuff" x:Name="grdGelirGider" Visibility="Visible" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Background="GreenYellow">
+                <!--<Grid.RowDefinitions>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>-->
+
+                <StackPanel>
+                    <Button x:Name="btngeri" Content="Geri Dön" Height="30" Margin="3"/>
+                    <TextBox x:Name="TxFiltrele" Grid.Row="1" Margin="3" Height="30"/>
+                    <ComboBox x:Name="CbFiltrele" Grid.Row="2" Margin="3" Height="30">
+                        <ComboBoxItem Content="Ürün Adına Göre Sırala A ~ Z"/>
+                        <ComboBoxItem Content="Ürün Adına Göre Sırala Z ~ A"/>
+                        <ComboBoxItem Content="Ürün Adedine Göre Sırala 0 ~ 9"/>
+                        <ComboBoxItem Content="Ürün Adedine Göre Sırala 9 ~ 0"/>
+                        <ComboBoxItem Content="Ürün Satış Fiyatına Göre Sırala 0 ~ 9"/>
+                        <ComboBoxItem Content="Ürün Satış Fiyatına Göre Sırala 9 ~ 0"/>
+                    </ComboBox>
+                </StackPanel>
+            </Grid>
+            <ListBox Grid.Column="1" Background="Wheat" x:Name="lbStokTakibi">
+                <ListBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Düzenle" x:Name="MiDüzenle"/>
+                        <MenuItem Header="Sil" x:Name="MiSil"/>
+                    </ContextMenu>
+                </ListBox.ContextMenu>
+            </ListBox>
+        </Grid>
+    </Grid>
+</Page>
